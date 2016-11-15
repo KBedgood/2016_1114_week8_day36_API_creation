@@ -11,7 +11,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body ng-controller='LocalHostController as storage'>
+<body ng-controller='userDetails as vm'>
      <div class="container">
           <table class="table table-hover table-bordered">
                <thead>
@@ -24,36 +24,34 @@
                     </tr>
                </thead>
                <tbody>
-                    <tr ng-repeat=user in controller.user track by $index>
+                    <tr ng-repeat="user in vm.user track by $index">
 <!--                     user can be taco, above
  -->                         <td>{{user.name}}</td>
                          <td>{{user.age}}</td>
                          <td>{{user.id}}</td>
-                         <td>{{user.id}}</td>
+                         <td>{{user.likesJS}}</td>
+                         <td><button ng-click="vm.deleteUser(user.id)">X</button>
                     </tr>
                </tbody>
           </table>
-          <form novalidate ng-submit="controller.addUser()">
+          <form novalidate ng-submit="vm.addUser(vm.form)">
                <div class="formData">
                     <div class="form-group">
                          <label for="usr">Name:</label>
-                         <input type="text" class="form-control" id="usr" ng-model='controller.form.name'>
+                         <input type="text" class="form-control" id="usr" ng-model='vm.form.name'>
                     </div>
                     <div class="form-group">
                          <label for="age">Age:</label>
-                         <input type="number" class="form-control" id="" ng-model='controller.form.age'>
+                         <input type="number" class="form-control" id="" ng-model='vm.form.age'>
                     </div>
                        <div class="form-group">
                          <label for="id">ID:</label>
-                         <input type="number" class="form-control" id="" ng-model='controller.form.id'>
+                         <input type="number" class="form-control" id="" ng-model='vm.form.id'>
                     </div>
                     <div class="form-group">
-                         <label for="usr">Enjoys Javascript:</label>
+                         <label for="usr">Likes Javascript</label>
                          <br>
-                         <label class="checkbox-inline">
-                              <input type="checkbox" value="true" ng-model='xx.xx.true'>Yep!</label>
-                         <label class="checkbox-inline">
-                              <input type="checkbox" value="false" ng-model='xx.xx.false'>Nope.</label>
+                         <input type="checkbox" name="likesJS" ng-model='vm.form.likesJS'>
                     </div>
                     <input type="submit" value="Submit">
                </div>

@@ -8,32 +8,35 @@
                const getUser = function() { //const because they are not going to change vs. var
                     var promise = $http({
                          method: 'GET',
-                         url: 'https://localhost:3000/user'
+                         url: 'http://localhost:3000/user'
                     });
                     return promise;
                }
 
                const addUser = function(user) {
 
-                    let obj = {
-                         user: user,
+                    let obj2 = {
+                         newUser: user,
                     }
+                    console.log(obj2);
                     var promise = $http({
                          method: 'POST',
-                         url: 'https://localhost:3000/user'
+                         data: obj2,
+                         url: 'http://localhost:3000/user'
                     });
                     return promise;
                }
 
                const deleteUser = function(id) {
                     let obj = {
-                         taco: id
+                         id: id
                     };
                     var promise = $http({
-                         method: 'DELETE',
+                         method: 'POST',
                          data: obj,
-                         url: 'https://localhost:3000/user'
+                         url: 'http://localhost:3000/user/delete'
                     });
+                    return promise;
                }
 
                // expose to use

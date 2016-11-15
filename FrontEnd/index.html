@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app='localHost'>
+
+<head>
+     <title>Week 8. Day 1. kb</title>
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,600" rel="stylesheet">
+     <meta charset="UTF-8">
+     <meta name='author' content='Kristie Bedgood'>
+     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="css/main.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body ng-controller='LocalHostController as storage'>
+     <div class="container">
+          <table class="table table-hover table-bordered">
+               <thead>
+                    <h1>getting to NODE you.</h1>
+                    <tr>
+                         <th>Name</th>
+                         <th>Age</th>
+                         <th>Enjoys Javascript</th>
+                    </tr>
+               </thead>
+               <tbody>
+                    <tr>
+                         <td>Taco</td>
+                         <td>99</td>
+                         <td>Nope.</td>
+                    </tr>
+               </tbody>
+          </table>
+          <form novalidate ng-submit="storage.submit(storage.form)">
+               <div class="formData">
+                    <div class="form-group">
+                         <label for="usr">Name:</label>
+                         <input type="text" class="form-control" id="usr" ng-model='xx.xx.name'>
+                    </div>
+                    <div class="form-group">
+                         <label for="age">Age:</label>
+                         <input type="number" class="form-control" id="" ng-model='xx.xx.age'>
+                    </div>
+                    <div class="form-group">
+                         <label for="usr">Enjoys Javascript:</label>
+                         <br>
+                         <label class="checkbox-inline">
+                              <input type="checkbox" value="true" ng-model='xx.xx.true'>Yep!</label>
+                         <label class="checkbox-inline">
+                              <input type="checkbox" value="false" ng-model='xx.xx.false'>Nope.</label>
+                    </div>
+                    <input type="submit" value="Submit">
+               </div>
+          </form>
+     </div>
+     </div>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js "></script>
+     <script src='main.js'></script>
+     <script src='factories/factory.js'></script>
+     <script src='controllers/controller.js'></script>
+</body>
+
+</html>

@@ -19,7 +19,6 @@
                     <tr>
                          <th>Name</th>
                          <th>Age</th>
-                         <th>ID</th>
                          <th>Enjoys Javascript</th>
                     </tr>
                </thead>
@@ -28,9 +27,8 @@
 <!--                     user can be taco, above
  -->                         <td>{{user.name}}</td>
                          <td>{{user.age}}</td>
-                         <td>{{user.id}}</td>
                          <td>{{user.likesJS}}</td>
-                         <td><button ng-click="vm.deleteUser(user.id)">X</button>
+                         <td><button ng-click="vm.deleteUser(user._id)">X</button>
                     </tr>
                </tbody>
           </table>

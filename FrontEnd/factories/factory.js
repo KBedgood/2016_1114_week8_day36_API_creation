@@ -8,7 +8,7 @@
                const getUser = function() { //const because they are not going to change vs. var
                     var promise = $http({
                          method: 'GET',
-                         url: 'http://localhost:3000/user'
+                         url: 'http://localhost:3009/user'
                     });
                     return promise;
                }
@@ -22,7 +22,7 @@
                     var promise = $http({
                          method: 'POST',
                          data: obj2,
-                         url: 'http://localhost:3000/user'
+                         url: 'http://localhost:3009/user'
                     });
                     return promise;
                }
@@ -34,7 +34,7 @@
                     var promise = $http({
                          method: 'POST',
                          data: obj,
-                         url: 'http://localhost:3000/user/delete'
+                         url: 'http://localhost:3009/user/delete'
                     });
                     return promise;
                }
